@@ -53,15 +53,29 @@ section { padding: 8rem 2rem; }
 
 .hero-right { display: flex; justify-content: center; }
 @media (min-width: 900px) { .hero-right { justify-content: flex-end; } }
-.heart-image {
+.heart-wrap {
+    all: unset;
+    position: relative;
     display: block;
-    width: 300px;
+    width: 345px;
     border-radius: 4px;
-    filter: grayscale(100%);
-    transition: filter .3s ease;
+    overflow: hidden;
+    cursor: pointer;
 }
-.heart-image:hover { filter: grayscale(0%) contrast(1.1) brightness(0.9) sepia(0.2) hue-rotate(-50deg); }
-@media (min-width: 900px) { .heart-image { width: 360px; } }
+@media (min-width: 900px) { .heart-wrap { width: 414px; } }
+.heart-image { display: block; width: 100%; filter: grayscale(100%); transition: filter .3s ease; }
+.heart-wrap.colored .heart-image { filter: grayscale(0%); }
+.heart-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #d33;
+    mix-blend-mode: color;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.heart-wrap:hover::after { opacity: 1; }
+.heart-wrap.colored::after { opacity: 0; }
 
 #story .story-inner { max-width: 1000px; margin: 0 auto; }
 .eyebrow { font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.2em; color: #8a8a8f; margin-bottom: 2rem; }
@@ -148,7 +162,9 @@ footer .sub { color: #8a8a8f; margin-top: 1rem; }
             </div>
         </div>
         <div class="hero-right">
-            <img class="heart-image" src="heart.jpeg" alt="Anatomical heart and vascular system">
+            <button class="heart-wrap" id="heartToggle" aria-label="Anatomical heart, click for color">
+                <img class="heart-image" src="heart.jpeg" alt="Anatomical heart and vascular system">
+            </button>
         </div>
     </div>
 </section>
@@ -163,7 +179,7 @@ footer .sub { color: #8a8a8f; margin-top: 1rem; }
                 <p>It was medical device technology that brought me back to the starting line — not just physically, but professionally. That experience became the ignition point for my career: a mission to build the very systems that give people their lives back.</p>
             </div>
             <div class="photo-strip">
-                <div class="photo-box"><img class="ph" src="IMG_5718.PNG" alt="Race day — finish line sprint"></div>
+                <div class="photo-box"><img class="ph" src="IMG_5718.PNG" alt="Race day — finish line sprint" style="object-position: center 15%;"></div>
                 <div class="photo-box"><img class="ph" src="IMG_5726.PNG" alt="Recovery — a run for the joy of it"></div>
                 <div class="photo-box"><img class="ph" src="device_example.png" alt="Engineering roots — EEG stroke-detection wearable prototype"></div>
             </div>
@@ -173,7 +189,7 @@ footer .sub { color: #8a8a8f; margin-top: 1rem; }
 
 <section id="experience" class="thin-divider">
     <div class="exp-inner">
-        <h2 class="eyebrow">Systems Engineering Experience</h2>
+        <h2 class="eyebrow">Engineering Experience</h2>
 
         <div class="exp-row">
             <div>
@@ -199,17 +215,17 @@ footer .sub { color: #8a8a8f; margin-top: 1rem; }
             <div>
                 <div class="exp-tag previous">Previous</div>
                 <h3 class="exp-role">Abbott Core Diagnostics</h3>
-                <p class="exp-meta">Field Service Engineer — SF Bay Area / Region West · Sep 2023–Oct 2024</p>
+                <p class="exp-meta">Field Service Engineer — Central Coast CA / Las Vegas, NV / SF Bay Area · Sep 2023–Oct 2024</p>
             </div>
             <div>
                 <p class="label">Problem</p>
-                <p class="text">Hospital and reference labs needed reliable deployment, validation, and support for a large fleet of Alinity diagnostic systems, plus fast, clear translation of field issues into product and service improvements.</p>
+                <p class="text">Hospital and reference labs across California and Nevada needed reliable deployment, validation, and support for a fleet of ARCHITECT and Alinity ci diagnostic systems, plus fast, clear translation of field issues into product and service improvements.</p>
                 <p class="label">Approach</p>
-                <p class="text">Deployed, qualified, and validated 25+ Alinity systems through instrument checks, QC workflows, and software updates; led go-live readiness, demos, and customer training; diagnosed hardware, software, and workflow failures directly with clinical users and Quality.</p>
+                <p class="text">Led Alinity ci installations across hospitals in San Luis Obispo and the Central Coast of California and Dignity Health hospitals in Las Vegas, with occasional support for UCSF accounts in San Francisco; deployed, qualified, and validated 25+ ARCHITECT and Alinity systems through instrument checks, QC workflows, and software updates; diagnosed hardware, software, and workflow failures directly with clinical users and Quality.</p>
                 <p class="label">Outcome</p>
                 <p class="text">Contributed to a 15% improvement in instrument uptime and reduced repeat escalations; turned recurring field feedback into escalation summaries, service bulletins, and onboarding documentation.</p>
                 <div class="tag-row">
-                    <span>Field Verification</span><span>Clinical Workflow</span><span>CAPA Support</span>
+                    <span>ARCHITECT / Alinity ci</span><span>Field Verification</span><span>Clinical Workflow</span><span>CAPA Support</span>
                     <span>Customer Training</span><span>Go-Live Readiness</span>
                 </div>
             </div>
@@ -354,6 +370,12 @@ footer .sub { color: #8a8a8f; margin-top: 1rem; }
 
 </main>
 
+<script>
+document.getElementById('heartToggle').addEventListener('click', function() {
+    const colored = this.classList.toggle('colored');
+    this.setAttribute('aria-label', colored ? 'Anatomical heart in color, click to reset' : 'Anatomical heart, click for color');
+});
+</script>
 
 </body>
 </html>
