@@ -76,6 +76,10 @@ section { padding: 8rem 2rem; }
 .photo-box.tall { height: auto; aspect-ratio: 640 / 1136; }
 .photo-box .ph { width: 100%; height: 100%; object-fit: cover; display: block; background: #2a2a2c; filter: grayscale(100%); transition: filter .3s ease; }
 .photo-box .ph:hover { filter: grayscale(0%) contrast(1.1) brightness(0.9) sepia(0.2) hue-rotate(-50deg); }
+.photo-row { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+@media (min-width: 700px) { .photo-row { grid-template-columns: 1fr 1fr; } }
+.photo-box.contain { height: 16rem; }
+.photo-box.contain .ph { object-fit: contain; }
 
 #experience .exp-inner { max-width: 1100px; margin: 0 auto; }
 .exp-row { display: grid; grid-template-columns: 1fr; gap: 2rem; padding: 3rem 0; }
@@ -170,9 +174,11 @@ footer .sub { color: #8a8a8f; margin-top: 1rem; }
             </div>
             <div class="photo-strip">
                 <div class="photo-box tall"><img class="ph" src="IMG_5718.PNG" alt="Race day — finish line sprint"></div>
-                <div class="photo-box"><img class="ph" src="IMG_5726.PNG" alt="Recovery — a run for the joy of it"></div>
-                <div class="photo-box"><img class="ph" src="device_example.png" alt="Engineering roots — EEG stroke-detection wearable prototype"></div>
             </div>
+        </div>
+        <div class="photo-row">
+            <div class="photo-box contain"><img class="ph" src="IMG_5726.PNG" alt="Recovery — a run for the joy of it"></div>
+            <div class="photo-box contain"><img class="ph" src="device_example.png" alt="Engineering roots — EEG stroke-detection wearable prototype"></div>
         </div>
     </div>
 </section>
