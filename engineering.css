@@ -171,3 +171,13 @@ nav .links a[aria-current="page"] { box-shadow: 0 1px var(--accent); }
     .case-page { padding-top: 8rem; }
     #hero { padding-top: 9rem; }
 }
+
+/* Case-study concept comparison. */
+.comparison-wrap { margin: 2rem 0; overflow-x: auto; }
+.engineering-comparison { border-collapse: collapse; width: 100%; font-size: .9375rem; text-align: left; }
+.engineering-comparison caption { text-align: left; font-weight: 500; margin-bottom: .75rem; }
+.engineering-comparison th, .engineering-comparison td { vertical-align: top; border-bottom: 1px solid var(--rule); padding: .875rem .75rem .875rem 0; }
+.engineering-comparison thead th { color: var(--muted); font-size: .875rem; font-weight: 500; }
+.engineering-comparison tbody th { width: 32%; font-weight: 500; }
+.engineering-comparison td { color: #c5c2ca; }
+@media (max-width: 720px) { .engineering-comparison { font-size: .875rem; } .engineering-comparison tbody th { width: 36%; } }
