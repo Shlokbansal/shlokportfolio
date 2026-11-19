@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shlok Bansal — R&amp;D Engineer</title>
+<title>Shlok Bansal — Biomedical R&amp;D &amp; Systems Engineer</title>
+<meta name="description" content="Biomedical engineer with hands-on experience in medical-device R&amp;D, electromechanical prototyping, laboratory automation, and systems integration.">
+<meta name="theme-color" content="#0d0d0f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -128,40 +130,37 @@ footer .sub { color: #8a8a8f; margin-top: 1rem; }
 .contact-links a:hover { color: #b3261e; }
 .copyright { font-size: 10px; font-family: 'JetBrains Mono', monospace; color: #555; text-transform: uppercase; letter-spacing: 0.2em; padding-top: 3rem; }
 </style>
-</head>
+<link rel="stylesheet" href="engineering.css">
+<script src="navigation.js" defer></script></head>
 <body>
 
-<nav>
-    <div class="brand">SHLOK BANSAL</div>
-    <div class="links">
-        <a href="#story">Story</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav aria-label="Main navigation"><a class="brand" href="index.html">SHLOK BANSAL</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button><div class="links" id="main-menu">
+<a href="index.html#story">About</a><a href="index.html#experience">Experience</a><a href="projects.html">Engineering Projects</a><a href="index.html#contact">Contact</a></div></nav>
 
-<main>
+<main id="main-content">
 
 <section id="hero">
     <div class="hero-grid">
         <div class="hero-left">
             <h1>Shlok Bansal</h1>
-            <p class="role">R&amp;D Engineer II — CardioVascular Surgery, Medtronic</p>
-            <p class="lead">Engineering life-saving systems with the precision of a researcher and the strategic instincts of a product builder. Based in Santa Rosa, CA — open to relocation and travel.</p>
-            <p class="bridge">Bridge between BME + Product Engineering</p>
+            <p class="role">Biomedical R&amp;D &amp; Systems Engineer</p>
+            <p class="lead">I build and test medical-device systems: electromechanical prototypes, instrumented experiments, and practical laboratory automation. Experience with Medtronic Aortic, Medtronic Neuromodulation, and Abbott. Based in the Bay Area — open to relocation and travel.</p>
+            <p class="bridge">Prototyping · Instrumentation · Systems integration</p>
             <div class="hero-cta">
-                <a href="#experience" class="btn-solid">View Work</a>
-                <a href="Shlok_Bansal_MASTER_MedTech_Resume.pdf" download="Shlok Bansal Resume.pdf" class="btn-outline">Resume / Contact</a>
+                <a href="projects.html" class="btn-solid">Explore Engineering Projects</a>
+                <a href="#contact" class="btn-outline">Get in touch</a>
             </div>
         </div>
         <div class="hero-right">
-            <button class="heart-wrap" id="heartToggle" aria-label="Anatomical heart, click for color">
+            <button class="heart-wrap" id="heartToggle" aria-pressed="false" aria-label="Anatomical heart, click for color">
                 <img class="heart-image" src="heart.jpeg" alt="Anatomical heart and vascular system">
             </button>
         </div>
     </div>
 </section>
+
+<section id="selected-projects" class="thin-divider"><div class="home-projects"><div class="section-heading"><div><p class="kicker accent">From the workbench</p><h2>Selected engineering projects</h2></div><a class="text-link" href="projects.html">View all five projects</a></div><div class="project-grid featured-grid"><article class="project-card featured"><a class="card-link" href="projects/recharge-validation.html"><div class="card-diagram" aria-hidden="true"><img src="assets/diagrams/recharge-validation.svg" alt="" width="760" height="320" loading="lazy"></div><div class="card-body"><p class="kicker">Medtronic Neuromodulation</p><h3>Recharge Validation System</h3><p class="card-summary">An Arduino-based test prototype bringing motion, sensing, and custom fixtures together for implantable-neurostimulator recharge validation.</p><p class="card-result">Electromechanical<span>prototype built for recharge validation</span></p><span class="read-case">Read case study</span></div></a><ul class="project-tags" aria-label="Technologies and skills"><li>Arduino</li><li>Motors &amp; sensors</li><li>3D-printed fixtures</li></ul></article><article class="project-card featured"><a class="card-link" href="projects/automated-refill.html"><div class="card-diagram" aria-hidden="true"><img src="assets/diagrams/automated-refill.svg" alt="" width="760" height="320" loading="lazy"></div><div class="card-body"><p class="kicker">Medtronic Aortic</p><h3>Automated Laboratory Refill</h3><p class="card-summary">A low-cost fluid-refill system that kept six fatigue-test frames running through a 10-day trial without refill interventions.</p><p class="card-result">6 frames · 10 days<span>zero refill interventions during the trial</span></p><span class="read-case">Read case study</span></div></a><ul class="project-tags" aria-label="Technologies and skills"><li>Fluid handling</li><li>Float valves</li><li>System integration</li></ul></article></div></div></section>
 
 <section id="story" class="thin-divider">
     <div class="story-inner">
@@ -189,15 +188,15 @@ footer .sub { color: #8a8a8f; margin-top: 1rem; }
 
         <div class="exp-row">
             <div>
-                <div class="exp-tag current">Current</div>
-                <h3 class="exp-role">Medtronic</h3>
-                <p class="exp-meta">R&amp;D Engineer II, CardioVascular Surgery — Santa Rosa, CA · 2025–Present</p>
+                <div class="exp-tag previous">Previous</div>
+                <h3 class="exp-role">Medtronic Aortic</h3>
+                <p class="exp-meta">R&amp;D Engineer II (contract via LanceSoft) — Santa Rosa, CA · Sep 2025–Aug 2026</p>
             </div>
             <div>
                 <p class="label">Problem</p>
                 <p class="text">Implantable aortic-device components need rigorous fatigue, tensile, and abrasion evidence to support design and regulatory decisions.</p>
                 <p class="label">Approach</p>
-                <p class="text">Develop and refine test methods, fixtures, and instrumentation using DOE and P-diagram-based problem structuring; execute IQ protocols on Bose ElectroForce fatigue systems; analyze soft-goods and long-duration data with Minitab and ANOVA to investigate anomalies and failure mechanisms.</p>
+                <p class="text">Developed and refined test methods, fixtures, and instrumentation using DOE and P-diagram-based problem structuring; executed IQ protocols on Bose ElectroForce fatigue systems; analyzed soft-goods and long-duration data with Minitab and ANOVA to investigate anomalies and failure mechanisms.</p>
                 <p class="label">Outcome</p>
                 <p class="text">Standardized suture and textile tensile/abrasion workflows and built structured analytics across test data, imaging, and documentation, translating findings into reviews that support R&amp;D, Quality, and program-priority decisions.</p>
                 <div class="tag-row">
@@ -319,7 +318,7 @@ footer .sub { color: #8a8a8f; margin-top: 1rem; }
                 <p class="edu-meta">Professional Development</p>
             </div>
             <div class="edu-detail">
-                Aortic anatomy, endovascular procedures, device concepts, and the clinical landscape — deepening the clinical context behind current aortic-device R&amp;D work.
+                Aortic anatomy, endovascular procedures, device concepts, and the clinical landscape — deepening the clinical context behind my aortic-device R&amp;D work.
             </div>
         </div>
     </div>
@@ -370,12 +369,12 @@ footer .sub { color: #8a8a8f; margin-top: 1rem; }
     <div class="footer-inner">
         <div>
             <h2>Let's build the future of health.</h2>
-            <p class="sub">Open to discussions on R&amp;D, V&amp;V, and Product Strategy.</p>
+            <p class="sub">Open to R&amp;D, systems, and hardware-engineering opportunities.</p>
         </div>
         <div class="contact-links">
             <a href="mailto:shlokbansal@gmail.com">shlokbansal@gmail.com</a>
             <a href="tel:9255184010">925-518-4010</a>
-            <a href="https://linkedin.com/in/shlok-bansal" target="_blank">LinkedIn</a>
+            <a href="https://linkedin.com/in/shlok-bansal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
         <div class="copyright">© 2026 Shlok Bansal. Engineered for reliability.</div>
     </div>
@@ -386,6 +385,7 @@ footer .sub { color: #8a8a8f; margin-top: 1rem; }
 <script>
 document.getElementById('heartToggle').addEventListener('click', function() {
     const colored = this.classList.toggle('colored');
+    this.setAttribute('aria-pressed', String(colored));
     this.setAttribute('aria-label', colored ? 'Anatomical heart in color, click to reset' : 'Anatomical heart, click for color');
 });
 </script>
