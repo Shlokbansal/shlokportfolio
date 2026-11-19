@@ -6,7 +6,7 @@ Static portfolio for biomedical R&D, systems, and hardware-engineering interview
 
 - `index.html`: background, selected projects, experience, and contact.
 - `projects.html`: engineering project index, with recharge validation and laboratory refill featured first.
-- `projects/*.html`: five self-contained case studies with problem, contribution, approach, result, and lessons learned.
+- `projects/*.html`: six individual case studies with problem, contribution, approach, result, and lessons learned.
 - `engineering.css`: shared navigation and project styling, including responsive layouts and reduced-motion support.
 - `navigation.js`: accessible mobile-menu enhancement; links remain available without JavaScript.
 - `assets/diagrams/*.svg`: original conceptual illustrations, not proprietary hardware drawings.
